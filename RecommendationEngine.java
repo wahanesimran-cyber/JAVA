@@ -3,10 +3,10 @@ import java.util.*;
 
 class RecommendationEngine {
 
-    // ✅ Declare data globally
+    // Declare data
     Map<String, Map<String, Integer>> data = new HashMap<>();
 
-    // ✅ Correct method with return type
+    
     public void loadData(String filePath) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line;
@@ -26,7 +26,7 @@ class RecommendationEngine {
         br.close();
     }
 
-    // ✅ Recommendation method
+    //  Recommendation method
     public List<String> recommend(String user) {
         Map<String, Integer> userRatings = data.get(user);
 
